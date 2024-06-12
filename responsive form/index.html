@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>responsive form</title>
+</head>
+<body>
+    <form>
+        <label for="first">First Name</label>
+        <input name="first" type="text" placeholder="personan noun" value="siham" readonly><br>
+        <label for="last">Last Name</label>
+        <input name="last" type="text" placeholder="family name"><br>
+        <label for="age">Age</label>
+        <input name="age" type="date"><br>
+        <label for="country">Country</label>
+        <select>
+           <option>Morocco</option>    
+           <option>USA</option>
+           <option>UAE</option>  
+        </select><br>
+        <label for="area">description</label>
+        <textarea name="area"></textarea><br>
+        <label for="nbr">tel</label>
+        <input name="nbr" type="tel" required minlength="10" maxlength="20"><br>
+        <label for="nbr">Number</label>
+        <input name="nbr" type="number" required><br>
+        <label>Female</label>
+        <input type="radio">
+        <label>Male</label>
+        <input type="radio"><br>
+        <label for="card">checkbox</label>
+        <input name="card" type="checkbox"><br>
+        <label for="card">select</label>
+        <input name="card" type="select"><br>
+        <label for="card">file</label>
+        <input name="card" type="file"><br>
+        <label for="card">hidden</label>
+        <input name="card" type="hidden"><br>
+        <label for="card">clickable</label>
+        <input name="card" type="clickable"><br>
+        <label for="submit">submit</label>
+        <input name="submit" type="submit"><br>
+        <label for="reset">reset</label>
+        <input name="reset" type="reset"><br>
+    </form>
+</body>
+</html>
+
+<!-- تُستخدم خاصية disabled لتجعل input الحقل مُعطل أو غير فعال.
+
+unusable لا يمكن التعديل على القيمة الموجودة داخل خاصية disabled مع عنصر input.
+un-clickable لا يمكن الضغط على القيمة الموجودة داخل خاصية disabled مع عنصر input.
+untab لا يمكن استخدم زر tab للتنقل بين other inputs بقية الحقول إذا كانت من نوع disabled.
+unhighlight يمكن عمل highlight على القيمة الموجودة داخل خاصية disabled.
+copy يمكن أن تُنسخ القيمة الموجودة داخل  خاصية disabled.
+القيمة داخل خاصية readonly ثابتة وافتراضية ولا تتغير، لذلك يتم اختصارها وكتابتها بدون قيمة.
+تستخدم خاصية size مع عنصر input بداخل HTML form لتحديد عرض input الحقل الذي يظهر على المتصفح وجعله بنفس قدر عرض الحروف.
+
+القيمة الافتراضية لخاصية size هي 20 حرف.
+خاصية size تعمل مع الحقول من النوع: text, search, tel, url, email, and password.
+تُستخدم خاصية maxlength مع HTML form input لتحديد أقصى عدد للحروف داخل عنصر input.
+
+لا يسمح بكتابة عدد حروف داخل عنصر input أكثر من عدد الحروف المحدّد داخل قيمة maxlength.
+تُستخدم خاصية min وخاصية max مع عنصر form input لتحديد أصغر وأكبر قيمة يمكن إدخالها داخل الحقل  input.
+
+تعمل خاصية min وخاصية max مع inputs الحقول من النوع: number, range, date, datetime-local, month, time and week.
+تُستخدم خاصية min وخاصية max لتحديد مجال القيم المسموح بها (من إلى) from to.
+تُستخدم خاصية required attribute لتحديد input  الحقول الإجبارية التي يُطلب من المستخدم تعبئتها قبل  الضغط على زر submit.
+
+تعمل خاصية required attribute مع الحقول من النوع: text, search, url, tel, email, password, date pickers, number, checkbox, radio, and file.
+
+تستخدم خاصية autocomplete attribute لحفظ أو إلغاء حفظ البيانات التي كتبها المستخدم داخل هذا input الحقل عندما يقوم بالنقر فوق زر submit.
+
+خاصية autocomplete attribute تمكّن المتصفح من حفظ أو إلغاء حفظ القيم السابقة للمستخدم في هذا form input الحقل.
+خاصية autocomplete attribute تعمل مع عنصر <form> وعنصر <input>.
+
+src="https://www.closetag.com/images/submit.png"  alt="submit" width="120" height="48"
+استخدام خاصية multiple لكي يتمكّن المستخدم من إضافة أكثر من ملف داخل حقل input file.
+تُستخدم خاصية pattern attribute لتحديد الحروف والعلامات والأرقام المسموح بها داخل عنصر form inputs قبل الضغط على زر submit.
+
+تعمل خاصية pattern attribute مع الحقول من النوع: text, date, search, url, tel, email, and password.
+يمكنك استخدام خاصية title مع عنصر input وخاصية pattern attribute لإظهار رسالة تُخبر المستخدم بوجود خطأ في إدخال البيانات داخل الحقل وتخبره بنوع المعلومات التي يجب إدخالها في هذا الحقل.
+لكن لا تظهر رسالة الخطأ إلا بعد الضغط على زر submit.
+ <input type="text" id="country_code" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code">
+
+تُستخدم step attribute في تحديد مقدار قفزة الزيادة والنقصان برقم محدد ومضاعفاته، فمثلاً لو قمنا بكتابة الرقم 3 كقيمة للخاصية step="3">.
+
+عند النقر على زر  السهم نحو الأعلى سوف يظهر الرقم 3 ثم 6 ثم 9 وهكذا..
+
+والعكس عند الضغط على زر السهم نحو الأسفل سوف تظهر الأرقام 3 ثم 0 ثم -3 ثم -6 وهكذا...
+
+تعمل خاصية step attribute مع الحقول من النوع: number, range, date, datetime-local, month, time and week.
+تعمل خاصية step attribute مع min و max عند تقليل القيمة وتكبيرها.
+
+<input type="number" id="points" name="points" step="3">
+
+تُستخدم خاصية autofocus attribute لكي يتم الوقوف على input حقل محدّد عند تحميل الصفحة، أي يكون مؤشر تعبئة الحقول عند هذا الحقل المحدّد للبدء في تعبئته.
+
+HTML form input autofocus attribute
+تحديد مكان توقف مؤشر تعبئة الحقول باستخدام خاصية autofocus.
+
+تُستخدم خاصية list attribute مع عنصر input من النوع input list للعرض وإظهار قائمة العناصر داخل عنصر <datalist>.
+
+<input list="browsers">
+      <datalist id="browsers">
+      <option value="Internet Explorer">
+      <option value="Firefox">
+      <option value="Chrome">
+      <option value="Opera">
+      <option value="Safari">
+    </datalist>
+
+يستخدم زر range input لاختيار قيمة واحدة محصورة بين قيميتين عن طريق slider مؤشر.
+
+القيمة التي تحدد زر range input هي range لتصبح بهذا الشكل <"input type="range>.
+لا يمكن اختيار أكثر من قيمة من خلال range input بداخل HTML form.
+يستخدم زر color input لاختيار لون من مجموعة ألوان، لتساعد المستخدم في تحديد اللون المناسب ضمن HTML form.
+
+القيمة التي تحدد زر color input هي color لتصبح بهذا الشكل <"input type="color>.
+لا يمكن اختيار أكثر من لون من خلال color input بداخل HTML form.
+يستخدم زر color input لاختيار لون من مجموعة ألوان لتساعد المستخدم في تحديد اللون المناسب داخل HTML form.
+
+
+-->
